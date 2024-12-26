@@ -1,6 +1,6 @@
 ### Builder image ###
-# Using Ubuntu 20.04
-FROM ubuntu:20.04 AS builder-image
+# Using Ubuntu 24.04
+FROM ubuntu:24.04 AS builder-image
 
 # Avoid stuck build due to user prompt
 ARG DEBIAN_FRONTEND=noninteractive
@@ -20,8 +20,8 @@ WORKDIR /home/app
 RUN chmod 755 build.sh && ./build.sh && ninja
 
 ### Runner image ###
-# Using Ubuntu 20.04
-FROM ubuntu:20.04 AS runner-image
+# Using Ubuntu 24.04
+FROM ubuntu:24.04 AS runner-image
 
 # Run the software
 CMD [ "./HelloWorld" ]
