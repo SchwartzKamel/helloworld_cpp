@@ -18,7 +18,7 @@ Environment
 ----------
 
 ```
-Ubuntu 20.04
+Ubuntu 24.04
 CMake
 ninja-build
 clang 10.0.0
